@@ -1,3 +1,4 @@
-# SDK C# da API do Marketplace CNOVA
+## SDK C# da API do Marketplace CNOVA
 
-https://desenvolvedores.cnova.com/api-portal/docs/apilojista/main/index.html
+Documentação:
+* https://desenvolvedores.cnova.com/api-portal/docs/apilojista/main/index.html
