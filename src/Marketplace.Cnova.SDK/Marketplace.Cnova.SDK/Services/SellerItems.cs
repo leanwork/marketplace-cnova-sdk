@@ -25,6 +25,44 @@ namespace Marketplace.Cnova.SDK.Services
 
         #endregion
 
+        public APIResult UpdateStock(StockUpdateRequest request)
+        {
+            if (request == null)
+            {
+                throw new ArgumentNullException("request");
+            }
+
+            APIResult apiResult = new APIResult();
+
+            try
+            {
+                var data = new
+                {
+                    quantity = request.quantity,
+                    crossDockingTime = request.crossDockingTime,
+                    warehouse = request.warehouse
+                };
+                string requestBody = JsonConvert.SerializeObject(data);
+                string resource = String.Format("/sellerItems/{0}/stock", request.skuSellerId);
+                var webRequest = CreateWebRequest();
+                using (var webResponse = webRequest.PUT(resource, requestBody))
+                {
+                    apiResult.StatusCode = webResponse.StatusCode;
+
+                    if (webResponse.StatusCode != HttpStatusCode.NoContent)
+                    {
+                        apiResult.Errors = GetErrors(webResponse);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                apiResult = ThreatException(ex, apiResult);
+            }
+
+            return apiResult;
+        }
+
         public SellerItemsResult GetAll(int offset = 0, int limit = 50)
         {
             SellerItemsResult apiResult = new SellerItemsResult();

@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 
 namespace Marketplace.Cnova.SDK.Services
@@ -65,6 +66,11 @@ namespace Marketplace.Cnova.SDK.Services
             string error = string.Empty;
             using (var stream = new StreamReader(response.GetResponseStream()))
             {
+                error = stream.ReadToEnd();
+                if (String.IsNullOrWhiteSpace(error))
+                {
+                    return Enumerable.Empty<Error>().ToList();
+                }
                 return JsonConvert.DeserializeObject<ICollection<Error>>(stream.ReadToEnd());
             }
         }

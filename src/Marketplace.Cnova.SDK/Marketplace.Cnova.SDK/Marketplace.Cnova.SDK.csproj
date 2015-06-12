@@ -60,7 +60,7 @@
     <Compile Include="Models\PriceUpdate.cs" />
     <Compile Include="Models\SellerItem.cs" />
     <Compile Include="Models\SellerItemsResult.cs" />
-    <Compile Include="Models\StockUpdate.cs" />
+    <Compile Include="Models\StockUpdateRequest.cs" />
     <Compile Include="Models\Url.cs" />
     <Compile Include="Models\Video.cs" />
     <Compile Include="Services\APIServiceBase.cs" />
