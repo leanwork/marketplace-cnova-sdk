@@ -10,7 +10,7 @@ namespace Marketplace.Cnova.SDK
 {
     internal static class StringExtensions
     {
-        public static byte[] CompressWithGzip(string text)
+        public static byte[] CompressWithGzip(this string text)
         {
             //Compress and save buffer
             var output = new MemoryStream();

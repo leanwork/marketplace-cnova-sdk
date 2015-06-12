@@ -52,7 +52,11 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Models\APIResult.cs" />
     <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\GiftWrap.cs" />
+    <Compile Include="Models\LoadProductsRequest.cs" />
     <Compile Include="Services\APIServiceBase.cs" />
+    <Compile Include="Services\ILoads.cs" />
+    <Compile Include="Services\Loads.cs" />
     <Compile Include="Utils\ISimpleRequest.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
