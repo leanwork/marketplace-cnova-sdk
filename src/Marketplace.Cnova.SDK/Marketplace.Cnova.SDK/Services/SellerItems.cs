@@ -63,6 +63,44 @@ namespace Marketplace.Cnova.SDK.Services
             return apiResult;
         }
 
+        public APIResult UpdatePrice(PriceUpdateRequest request)
+        {
+            if (request == null)
+            {
+                throw new ArgumentNullException("request");
+            }
+
+            APIResult apiResult = new APIResult();
+
+            try
+            {
+                var data = new
+                {
+                    @default = request.@default,
+                    offer = request.offer,
+                    site = request.site ?? String.Empty
+                };
+                string requestBody = JsonConvert.SerializeObject(data);
+                string resource = String.Format("/sellerItems/{0}/prices", request.skuSellerId);
+                var webRequest = CreateWebRequest();
+                using (var webResponse = webRequest.PUT(resource, requestBody))
+                {
+                    apiResult.StatusCode = webResponse.StatusCode;
+
+                    if (webResponse.StatusCode != HttpStatusCode.NoContent)
+                    {
+                        apiResult.Errors = GetErrors(webResponse);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                apiResult = ThreatException(ex, apiResult);
+            }
+
+            return apiResult;
+        }
+
         public SellerItemsResult GetAll(int offset = 0, int limit = 50)
         {
             SellerItemsResult apiResult = new SellerItemsResult();

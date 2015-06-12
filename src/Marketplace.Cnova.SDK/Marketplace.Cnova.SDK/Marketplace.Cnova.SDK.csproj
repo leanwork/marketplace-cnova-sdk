@@ -57,7 +57,7 @@
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\LoadProductsRequest.cs" />
     <Compile Include="Models\Metadata.cs" />
-    <Compile Include="Models\PriceUpdate.cs" />
+    <Compile Include="Models\PriceUpdateRequest.cs" />
     <Compile Include="Models\SellerItem.cs" />
     <Compile Include="Models\SellerItemsResult.cs" />
     <Compile Include="Models\StockUpdateRequest.cs" />

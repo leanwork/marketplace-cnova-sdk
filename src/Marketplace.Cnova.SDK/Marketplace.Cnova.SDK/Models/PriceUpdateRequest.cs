@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Marketplace.Cnova.SDK.Models
 {
-    public class PriceUpdate
+    public class PriceUpdateRequest
     {
         public string skuSellerId { get; set; }
 

@@ -10,6 +10,7 @@ namespace Marketplace.Cnova.SDK.Services
     public interface ISellerItems
     {
         APIResult UpdateStock(StockUpdateRequest request);
+        APIResult UpdatePrice(PriceUpdateRequest request);
         SellerItemsResult GetAll(int offset = 0, int limit = 50);
     }
 }
