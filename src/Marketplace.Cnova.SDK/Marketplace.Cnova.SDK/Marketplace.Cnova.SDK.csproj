@@ -57,6 +57,8 @@
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\LoadProductsRequest.cs" />
     <Compile Include="Models\Metadata.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderResult.cs" />
     <Compile Include="Models\PriceUpdateRequest.cs" />
     <Compile Include="Models\SellerItem.cs" />
     <Compile Include="Models\SellerItemsResult.cs" />
@@ -65,8 +67,10 @@
     <Compile Include="Models\Video.cs" />
     <Compile Include="Services\APIServiceBase.cs" />
     <Compile Include="Services\ILoads.cs" />
+    <Compile Include="Services\IOrders.cs" />
     <Compile Include="Services\ISellerItems.cs" />
     <Compile Include="Services\Loads.cs" />
+    <Compile Include="Services\Orders.cs" />
     <Compile Include="Services\SellerItems.cs" />
     <Compile Include="Utils\ISimpleRequest.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
