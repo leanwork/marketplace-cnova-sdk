@@ -95,5 +95,39 @@ namespace Marketplace.Cnova.SDK.Services
 
             return apiResult;
         }
+
+        public APIResult TrackingDelivered(TrackingUpdateRequest request)
+        {
+            if (request == null)
+            {
+                throw new ArgumentNullException("request");
+            }
+
+            APIResult apiResult = new APIResult();
+
+            try
+            {
+                string requestBody = request.ToJSON();
+                var webRequest = CreateWebRequest();
+                string resource = String.Format("/orders/{0}/trackings/delivered", request.orderId);
+                using (var webResponse = webRequest.POST(resource, requestBody))
+                {
+                    apiResult.StatusCode = webResponse.StatusCode;
+
+                    if (webResponse.StatusCode != HttpStatusCode.Created)
+                    {
+                        apiResult.Errors = GetErrors(webResponse);
+                    }
+
+                    return apiResult;
+                }
+            }
+            catch (Exception ex)
+            {
+                apiResult = ThreatException(ex, apiResult);
+            }
+
+            return apiResult;
+        }
     }
 }
