@@ -10,5 +10,6 @@ namespace Marketplace.Cnova.SDK.Services
     public interface IOrders
     {
         OrderResult GetById(string orderId);
+        APIResult TrackingSent(TrackingUpdateRequest request);
     }
 }
