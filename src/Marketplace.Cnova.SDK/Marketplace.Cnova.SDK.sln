@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Cnova.SDK", "Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Cnova.SDK.Tests", "Marketplace.Cnova.SDK.Tests\Marketplace.Cnova.SDK.Tests.csproj", "{88EEBFB2-EDF8-4C2F-A32A-A95907C98394}"
 EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "Marketplace.Cnova.SDK.nupkg", "Marketplace.Cnova.SDK.nupkg\Marketplace.Cnova.SDK.nupkg.nuproj", "{88558B97-DB9B-48BA-BA48-BE366B47CAEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{88EEBFB2-EDF8-4C2F-A32A-A95907C98394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88EEBFB2-EDF8-4C2F-A32A-A95907C98394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88EEBFB2-EDF8-4C2F-A32A-A95907C98394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88558B97-DB9B-48BA-BA48-BE366B47CAEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88558B97-DB9B-48BA-BA48-BE366B47CAEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88558B97-DB9B-48BA-BA48-BE366B47CAEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88558B97-DB9B-48BA-BA48-BE366B47CAEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
