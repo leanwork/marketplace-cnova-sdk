@@ -31,7 +31,7 @@ namespace Marketplace.Cnova.SDK.Models
         /// <summary>
         /// Status do produto para cada site
         /// </summary>
-        public string status { get; set; }
+        public Status status { get; set; }
 
         /// <summary>
         /// Informações do catálogo de produtos
@@ -97,6 +97,19 @@ namespace Marketplace.Cnova.SDK.Models
             set { _urls = value; }
         }
         List<Url> _urls;
+
+        public class Status
+        {
+            /// <summary>
+            /// (boolean): Status do produto,
+            /// </summary>
+            public bool active { get; set; }
+
+            /// <summary>
+            /// (string): Site para o qual o status é considerado. Os possíveis sites são: 'EX','PF','CB', 'EH', 'BT', 'CD'.
+            /// </summary>
+            public string site { get; set; }
+        }
 
         public class Price
         {
