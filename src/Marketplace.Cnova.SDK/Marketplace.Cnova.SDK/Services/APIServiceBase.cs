@@ -71,7 +71,7 @@ namespace Marketplace.Cnova.SDK.Services
                 {
                     return Enumerable.Empty<Error>().ToList();
                 }
-                return JsonConvert.DeserializeObject<ICollection<Error>>(stream.ReadToEnd());
+                return JsonConvert.DeserializeObject<ICollection<Error>>(error);
             }
         }
 
@@ -100,7 +100,7 @@ namespace Marketplace.Cnova.SDK.Services
                     using (var stream = new StreamReader(webException.Response.GetResponseStream()))
                     {
                         message = stream.ReadToEnd();
-                        response.Errors = JsonConvert.DeserializeObject<ICollection<Error>>(stream.ReadToEnd());
+                        response.Errors = JsonConvert.DeserializeObject<ICollection<Error>>(message);
                     }
 
                     return response;

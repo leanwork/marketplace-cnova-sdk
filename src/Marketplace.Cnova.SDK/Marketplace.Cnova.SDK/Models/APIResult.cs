@@ -13,7 +13,7 @@ namespace Marketplace.Cnova.SDK.Models
 
         public ICollection<Error> Errors
         {
-            get { return _errors ?? new List<Error>(); }
+            get { return _errors ?? (_errors = new List<Error>()); }
             set { _errors = value; }
         }
         ICollection<Error> _errors;
